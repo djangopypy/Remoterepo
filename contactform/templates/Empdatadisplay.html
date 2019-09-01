@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EmpData</title>
+</head>
+<style>
+    td,th{padding: 10px 20px; font-size: 20px}
+</style>
+<body>
+{% if edata %}
+<center>
+    <h2>Employee data</h2>
+    <table border="2px">
+        <thead>
+        <tr>
+            <th>Emp name</th>
+            <th>emp email</th>
+            <th>emp salary</th>
+            <th>emp location</th>
+        </tr>
+        </thead>
+        {% for i in edata %}
+        <tbody>
+        <tr>
+            <td> {{ i.name }}</td>
+            <td> {{ i.email }}</td>
+            <td> {{ i.salary }}</td>
+            <td> {{ i.location }}</td>
+        </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</center>
+{% else %}
+<h2>data is not available</h2>
+{% endif %}
+</body>
+</html>
