@@ -81,7 +81,10 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME':'contactformdb',
         'USER':'root',
-        'PASSWORD':'root'
+        'PASSWORD':'root',
+        'HOST': '127.0.0.1',
+        'PORT': '3306',
+         'SOCKET' :'/var/lib/mysql/mysql.sock',
     }
 }
 
